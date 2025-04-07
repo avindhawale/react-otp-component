@@ -14,7 +14,7 @@ export default function App() {
     setNumberList((prevValue) => {
       const newValue = [...prevValue];
       newValue[index] = value.slice(-1);
-      numberListRef.current[index + 1]?.focus();
+      value && numberListRef.current[index + 1]?.focus();
       return newValue;
     });
   };
